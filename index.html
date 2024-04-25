@@ -4,43 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/styled.css">
+    <!-- Incluir Font Awesome desde un CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" crossorigin="anonymous" />
+
     <title>Navbar</title>
 </head>
 <body>
     <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
+
+body {
+    font-family: "Quicksand", sans-serif;
+}
+
 nav {
-    max-width: 100%;
-    background: rgb(231, 232, 213);
+    background: #ececec;
 }
 .navbar {
+    width: 50vw;
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: auto;
 }
-ul {
-    
+.logo {
+    width: 200px;
+    padding: 0 20px;
+}
+img{
+    max-width: 100%;
 }
 .links {
-
+    padding: 0 20px;
 }
+ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+ul a {
+    text-decoration: none;
+}
+ul a:hover {
+    color: rgb(149, 159, 102);
+}
+button {
+    width: 25px;
+    border: none;
+    cursor: pointer;
+}
+
     </style>
     <nav>
         <div class="navbar">
             <div class="logo">
-                <img src="" alt="logo">
+                <img src="assets/img/logo.png" alt="logo">
             </div>
-            <ul class="links">
-                <li>Home</li>
-                <li>Contact</li>
-                <li>About Us</li>
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            </button>
+            <div class="links">
+            <ul>
+                <a href=""><li>Home</li></a>
+                <a href=""><li>Contact</li></a>
+                <a href=""><li>About Us</li></a>
             </ul>
         </div>
-    </nav>
+    </div>
+</nav>
     <script src="src/app.js"></script>
 </body>
 </html>
