@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/styled.css">
-    <!-- Incluir Font Awesome desde un CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" crossorigin="anonymous" />
-
     <title>Navbar</title>
 </head>
 <body>
@@ -18,11 +15,9 @@
     padding: 0;
     margin: 0;
 }
-
 body {
     font-family: "Quicksand", sans-serif;
 }
-
 nav {
     background: #ececec;
 }
@@ -41,9 +36,6 @@ nav {
 img{
     max-width: 100%;
 }
-.links {
-    padding: 0 20px;
-}
 ul {
     display: flex;
     gap: 20px;
@@ -57,8 +49,20 @@ ul a:hover {
 }
 button {
     width: 25px;
+    display: none;
     border: none;
     cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  button {
+    display: block;
+  }
+  .links {
+    display: none;
+  }
+  .navbar {
+    width: 70vw;
+  }
 }
 
     </style>
@@ -72,9 +76,9 @@ button {
             </button>
             <div class="links">
             <ul>
-                <a href=""><li>Home</li></a>
-                <a href=""><li>Contact</li></a>
-                <a href=""><li>About Us</li></a>
+                <a href="#"><li>Home</li></a>
+                <a href="#"><li>Contact</li></a>
+                <a href="#"><li>About Us</li></a>
             </ul>
         </div>
     </div>
