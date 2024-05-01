@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Hamburguesa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 1.2rem;
+}
+
+.menu-links {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu-links li {
+  margin-right: 20px;
+}
+
+.menu-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.menu-btn.open .menu-icon {
+  transform: rotate(45deg);
+}
+
+.menu-btn.open .menu-icon::before,
+.menu-btn.open .menu-icon::after {
+  top: 0;
+  transform: rotate(-90deg);
+}
+
+.menu-btn.open .menu-icon::after {
+  transform: rotate(-45deg);
+}
+
+.menu-links {
+  display: none;
+}
+
+.menu-links.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-color: #333;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.menu-links.active li {
+  margin-bottom: 10px;
+}
+
+.menu-links.active a {
+  color: #fff;
+}
+
+    </style>
+  <nav class="navbar">
+    <div class="logo">
+      Logo
+    </div>
+    <button class="menu-btn">
+      <div class="menu-icon"></div>
+    </button>
+    <ul class="menu-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <script src="src/app.djs"></script>
+</body>
+</html>
